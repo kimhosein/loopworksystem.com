@@ -13,8 +13,8 @@
     gtag('config', 'G-WGJQSQGF4W');
   </script>
 
-  <title>Loopwork System — Kim Hosein | AI Safety Research</title>
-  <meta name="description" content="Loopwork System, LLC. Independent research applying clinical causality assessment to the bidirectional interaction between humans and AI systems. Founded by Kim Hosein.">
+  <title>Loopwork System — Kim Hosein | AI Safety Evaluation Research</title>
+  <meta name="description" content="Loopwork System, LLC. Independent research by Kim Hosein applying clinical causality assessment to the bidirectional interaction between humans and AI systems.">
   <meta name="author" content="Kim Hosein">
   <link rel="canonical" href="https://loopworksystem.com">
   
@@ -24,6 +24,11 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://loopworksystem.com">
   <meta property="og:site_name" content="Loopwork System">
+  
+  <!-- Twitter/Social Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Loopwork System — Kim Hosein">
+  <meta name="twitter:description" content="Independent research applying clinical causality assessment to the bidirectional interaction between humans and AI systems.">
   
   <!-- Google Scholar metadata -->
   <meta name="citation_author" content="Hosein, Kim">
@@ -238,6 +243,22 @@
       margin-top: 1rem;
     }
 
+    .about-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .about-photo {
+      width: 100%;
+      max-width: 280px;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 3px;
+      filter: grayscale(15%);
+    }
+
     .about-details {
       padding: 2rem;
       background: var(--highlight);
@@ -437,6 +458,69 @@
       content: ' →';
     }
 
+    /* ---- POSTER VIEWER ---- */
+    .poster-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    .poster-meta {
+      margin-bottom: 2rem;
+      max-width: 640px;
+    }
+
+    .poster-meta p {
+      font-weight: 300;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    .poster-viewer-wrap {
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      overflow: hidden;
+      background: #e8e4dc;
+    }
+
+    .poster-viewer-wrap iframe {
+      width: 100%;
+      height: 75vh;
+      min-height: 500px;
+      border: none;
+      display: block;
+    }
+
+    .poster-viewer-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .poster-download {
+      margin-top: 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .poster-download:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .poster-download::after {
+      content: ' ↓';
+    }
+
     /* ---- PUBLICATIONS ---- */
     .pub-grid {
       display: grid;
@@ -611,10 +695,17 @@
 
       .hero { padding: 7rem 1.5rem 3rem; }
       section { padding: 3.5rem 1.5rem; }
+      .poster-section { padding: 3.5rem 1.5rem; }
 
       .about-content { grid-template-columns: 1fr; gap: 2rem; }
+      .about-photo { max-width: 200px; }
       .pub-grid { grid-template-columns: 1fr; }
       .contact-content { flex-direction: column; gap: 2rem; }
+
+      .poster-viewer-wrap iframe {
+        height: 50vh;
+        min-height: 350px;
+      }
 
       footer {
         flex-direction: column;
@@ -636,6 +727,7 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
+        <li><a href="#poster">Poster</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -662,19 +754,22 @@
         <p>My work examines the bidirectional exchange between humans and AI systems — what the user brings, what the system conducts back, what forms between them, and how to assess causality in both directions. The same methodological rigor used to evaluate whether a drug caused an adverse event can be applied to evaluate what happens when human signal passes through AI architecture and returns transformed.</p>
         <p>I bring a cross-domain perspective rooted in regulatory science, clinical operations, and the structural analysis of how systems designed to protect can instead cause measurable damage when they pattern-match on demographics over methodology.</p>
       </div>
-      <div class="about-details">
-        <h3>At a glance</h3>
-        <div class="detail-item">
-          <div class="detail-label">Role</div>
-          <div class="detail-value">Clinical Project Lead</div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-label">Research</div>
-          <div class="detail-value">Founder, Loopwork System, LLC</div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-label">Focus</div>
-          <div class="detail-value">Causality assessment × human-AI interaction</div>
+      <div class="about-sidebar">
+        <img src="headshot.jpeg" alt="Kim Hosein" class="about-photo">
+        <div class="about-details">
+          <h3>At a glance</h3>
+          <div class="detail-item">
+            <div class="detail-label">Role</div>
+            <div class="detail-value">Clinical Project Lead</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Research</div>
+            <div class="detail-value">Founder, Loopwork System, LLC</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Focus</div>
+            <div class="detail-value">Causality assessment × human-AI interaction</div>
+          </div>
         </div>
       </div>
     </div>
@@ -744,27 +839,28 @@
           <div class="research-venue">Stanford AIMI Symposium · June 3, 2026</div>
           <p>Applies causality assessment methodology to AI safety layer failures, demonstrating how alignment architectures pattern-match on demographics over methodology — producing gendered institutional dismissal with measurable clinical parallels.</p>
           <div class="research-links">
-            <a href="https://bit.ly/aimi2026-poster" target="_blank">View Poster</a>
-            <!-- <a href="#">Zenodo DOI</a> -->
+            <a href="#poster">View Poster</a>
             <a href="https://loopworksystem.substack.com" target="_blank">Research Register</a>
           </div>
         </div>
-
-        <!-- Add more accepted work here -->
-        <!--
-        <div class="research-card">
-          <div class="research-type">Paper</div>
-          <h3>Title</h3>
-          <div class="research-venue">Venue · Date</div>
-          <p>Description.</p>
-          <div class="research-links">
-            <a href="#">PDF</a>
-            <a href="#">DOI</a>
-          </div>
-        </div>
-        -->
       </div>
     </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- POSTER -->
+  <section id="poster" class="poster-section fade-in">
+    <div class="section-label">Stanford AIMI Symposium 2026</div>
+    <h2>Conference Poster</h2>
+    <div class="poster-meta">
+      <p>Beyond the Safety Layer: How RLHF Architecture Produces Clinically Recognizable Patterns of User Harm</p>
+      <p style="margin-top: 0.8rem; font-size: 0.85rem;">Kimberly Hosein, MBA · Loopwork System, LLC · June 3, 2026 · Paul Berg Hall, Stanford University</p>
+    </div>
+    <div class="poster-viewer-wrap">
+      <iframe src="Hosein_AIMI2026_Poster_FINAL.pdf" title="AIMI 2026 Conference Poster"></iframe>
+    </div>
+    <a href="Hosein_AIMI2026_Poster_FINAL.pdf" download class="poster-download">Download PDF</a>
   </section>
 
   <div class="divider"><hr></div>
