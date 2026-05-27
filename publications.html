@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGJQSQGF4W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WGJQSQGF4W');
+  </script>
+
+  <title>Publications — Loopwork System</title>
+  <meta name="description" content="Publications and ongoing work from Loopwork System — research register, cultural criticism, and conference presentations.">
+  <meta name="author" content="Kim Hosein">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Publications — Loopwork System">
+  <meta property="og:description" content="Publications and ongoing work from Loopwork System.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://loopworksystem.com/publications.html">
+  <meta property="og:site_name" content="Loopwork System">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Loopwork System</a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-hero fade-in">
+    <div class="section-label">Publications</div>
+    <h2>Ongoing Work</h2>
+    <p>Two Substack publications serving distinct purposes within the broader research program.</p>
+
+    <div class="pub-grid">
+      <a href="https://loopworksystem.substack.com" target="_blank" class="pub-card">
+        <div class="pub-name">Loopwork System</div>
+        <div class="pub-tag">Research Register</div>
+        <p class="pub-description">The formal research archive. Published analyses, methodological development, and the documented evidence base underpinning the AI safety evaluation framework.</p>
+        <div class="pub-cta">Read on Substack</div>
+      </a>
+
+      <a href="https://agrotera612.substack.com" target="_blank" class="pub-card">
+        <div class="pub-name">Agrotera</div>
+        <div class="pub-tag">Personal &amp; Political Voice</div>
+        <p class="pub-description">Cultural criticism, structural analysis, and the personal voice behind the research. Connects reality TV dynamics, media tropes, and institutional patterns to the broader arguments.</p>
+        <div class="pub-cta">Read on Substack</div>
+      </a>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- CONFERENCE WORK -->
+  <section class="fade-in">
+    <div class="section-label">Conference Presentations</div>
+    <h2>Accepted Work</h2>
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="research-type">Conference Poster</div>
+        <h3>Beyond the Safety Layer: How RLHF Architecture Produces Clinically Recognizable Patterns of User Harm</h3>
+        <div class="research-venue">Stanford AIMI Symposium · June 3, 2026</div>
+        <p>Applies causality assessment methodology to AI safety layer failures, demonstrating how alignment architectures pattern-match on demographics over methodology — producing gendered institutional dismissal with measurable clinical parallels.</p>
+        <div class="research-links">
+          <a href="index.html#poster">View Poster</a>
+          <a href="https://doi.org/10.5281/zenodo.20369051" target="_blank">Zenodo DOI</a>
+          <a href="Hosein_AIMI2026_Poster_FINAL.pdf" download>Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>&copy; 2026 Loopwork System, LLC. All rights reserved.</div>
+    <div>
+      <a href="https://loopworksystem.substack.com" target="_blank">Substack</a> · 
+      <a href="https://www.linkedin.com/in/kim-h-271b71373" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
