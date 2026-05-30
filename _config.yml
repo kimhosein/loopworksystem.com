@@ -1,0 +1,21 @@
+# Loopwork System — Jekyll Configuration
+# This enables blog functionality on your existing GitHub Pages site.
+# Your existing HTML pages (index.html, about.html, etc.) are unaffected.
+
+title: Loopwork System
+author: Kim Hosein
+url: "https://loopworksystem.com"
+description: "Independent research applying clinical causality assessment to the bidirectional interaction between humans and AI systems."
+
+# Blog settings
+permalink: /blog/:year/:month/:title/
+
+# Don't process these
+exclude:
+  - README.md
+  - LICENSE
+
+# SEO
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

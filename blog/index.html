@@ -1,0 +1,111 @@
+---
+layout: null
+title: Blog — Loopwork System
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGJQSQGF4W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WGJQSQGF4W');
+  </script>
+
+  <title>Blog — Loopwork System</title>
+  <meta name="description" content="Research writing, methodology, and analysis from Loopwork System — applying clinical causality assessment to human-AI interaction.">
+  <meta name="author" content="Kim Hosein">
+  <link rel="canonical" href="https://loopworksystem.com/blog/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blog — Loopwork System">
+  <meta property="og:description" content="Research writing, methodology, and analysis from Loopwork System.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://loopworksystem.com/blog/">
+  <meta property="og:site_name" content="Loopwork System">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blog — Loopwork System">
+  <meta name="twitter:description" content="Research writing, methodology, and analysis from Loopwork System.">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/blog/blog.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="/index.html" class="nav-logo">Loopwork System</a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/index.html#research">Research</a></li>
+        <li><a href="/publications.html">Publications</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BLOG HEADER -->
+  <header class="blog-header">
+    <div class="section-label">Loopwork System</div>
+    <h1>Blog</h1>
+    <p>Research writing, methodology, and analysis — applying clinical causality assessment to the bidirectional interaction between humans and AI systems.</p>
+  </header>
+
+  <div class="divider"><hr></div>
+
+  <!-- BLOG LIST -->
+  <section class="blog-list">
+    {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% for year in posts_by_year %}
+    <div class="blog-year">{{ year.name }}</div>
+    {% for post in year.items %}
+    <a href="{{ post.url }}" class="blog-entry">
+      <div class="blog-entry-meta">
+        <span class="blog-entry-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+        {% if post.pillar %}
+        <span class="blog-entry-pillar">Pillar {{ post.pillar }}</span>
+        {% endif %}
+      </div>
+      <h2>{{ post.title }}</h2>
+      {% if post.description %}
+      <p class="blog-entry-excerpt">{{ post.description }}</p>
+      {% elsif post.excerpt %}
+      <p class="blog-entry-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+      {% endif %}
+      {% if post.tags and post.tags.size > 0 %}
+      <div class="blog-entry-tags">
+        {% for tag in post.tags %}
+        <span class="blog-entry-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </a>
+    {% endfor %}
+    {% endfor %}
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>&copy; 2026 Loopwork System, LLC. All rights reserved.</div>
+    <div>
+      <a href="https://loopworksystem.substack.com" target="_blank">Substack</a> · 
+      <a href="https://www.linkedin.com/in/kim-h-271b71373" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+
+</body>
+</html>
