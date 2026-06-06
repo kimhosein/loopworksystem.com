@@ -1,6 +1,6 @@
 ---
 title: "The AI Efficiency Gap: Why Clinical Safety Frameworks Are Failing"
-subtitle: "Kimberly Hosein, MBA, exposes the missing safety infrastructure in healthcare's rush to adopt LLMs."
+subtitle: "The missing safety infrastructure in healthcare's rush to adopt LLMs."
 date: 2026-06-06
 author: Kimberly Hosein, MBA
 permalink: /blog/ai-efficiency-gap-clinical-safety/
